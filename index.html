@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CITOG Admin Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-shell">
+      <header class="dashboard-header">
+        <div>
+          <p class="eyebrow">CITOG Command Center</p>
+          <h1>
+            Refined analytics for growth, operations, and product performance.
+          </h1>
+          <p>
+            A polished workspace built for leaders who need instant visibility
+            across product, pipeline, and customer signals.
+          </p>
+        </div>
+        <div class="dashboard-actions">
+          <button id="back-btn" type="button" class="secondary-btn">
+            Back to portfolio
+          </button>
+          <button id="refresh-btn" type="button" class="primary-btn">
+            Refresh view
+          </button>
+        </div>
+      </header>
+
+      <section id="kpi-grid" class="kpi-grid"></section>
+
+      <div class="dashboard-grid">
+        <section class="panel analytics-panel">
+          <div class="panel-header">
+            <div>
+              <h3>Growth pulse</h3>
+              <p>Realtime revenue and customer signal trend.</p>
+            </div>
+            <div class="range-tabs">
+              <button type="button" class="range-chip range-chip--active">
+                Weekly
+              </button>
+              <button type="button" class="range-chip">Monthly</button>
+              <button type="button" class="range-chip">Quarterly</button>
+            </div>
+          </div>
+          <div class="growth-chart-frame">
+            <div id="growth-chart" class="growth-chart"></div>
+            <div class="growth-summary">
+              <span class="growth-value">78%</span>
+              <span id="range-label" class="growth-note">Weekly</span>
+            </div>
+          </div>
+        </section>
+
+        <aside class="aside-panel">
+          <div class="panel donut-card">
+            <div class="panel-header">
+              <div>
+                <h3>Product engagement</h3>
+                <p>Active usage rate across flagship workflows.</p>
+              </div>
+            </div>
+            <div class="donut-chart">
+              <div class="donut-center">
+                <strong>72%</strong>
+                <span>Engaged users</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel status-panel">
+            <div class="panel-header">
+              <h3>Operations status</h3>
+            </div>
+            <div id="status-list" class="status-list"></div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="dashboard-grid dashboard-secondary-grid">
+        <section class="panel performance-panel">
+          <div class="panel-header">
+            <div>
+              <h3>Product performance</h3>
+              <p>Fast insights for product teams and delivery owners.</p>
+            </div>
+          </div>
+          <div id="product-table" class="product-table"></div>
+        </section>
+
+        <section class="panel activity-panel">
+          <div class="panel-header">
+            <div>
+              <h3>Live pulse & alerts</h3>
+              <p>Signals and events that need your attention now.</p>
+            </div>
+          </div>
+          <div id="activity-list" class="activity-list"></div>
+          <div id="timeline-list" class="timeline-list"></div>
+        </section>
+      </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>
